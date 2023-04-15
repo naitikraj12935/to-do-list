@@ -1,11 +1,17 @@
-const togglebtn=document.querySelector(".toogle")
-const toggleicon=document.querySelector(".toogle i")
-const drop=document.querySelector(".dropmenu")
+const btn = document.querySelector(".addbtn");
+const input = document.querySelector(".input");
+const tasks = document.querySelector(".tasks");
 
-togglebtn.addEventListener('click',function(){
-    drop.classList.toggle('open')
-    // const isopen=drop.classList.contains('open')
-    // toggleicon.classList = isopen
-    // ? 'fa-solid fa-Xmark'
-    // :'fa-solid fa-bars'
-})
+btn.addEventListener('click', function() {
+  let checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  let label = document.createElement("label");
+  label.textContent = input.value;
+  input.value = "";
+  let task = document.createElement("div");
+  task.classList.add("task");
+   task.appendChild(checkbox);
+  task.appendChild(label); // append label before checkbox
+ 
+  tasks.appendChild(task);
+});
