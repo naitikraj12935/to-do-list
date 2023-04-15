@@ -1,0 +1,188 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style-type: none;
+}
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('https://images.alphacoders.com/188/188121.jpg');
+    background-position: center;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.logo{
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: rgb(76, 52, 7);
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.container{
+    width: 100%;
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0rem 0rem 0rem 2rem;
+}
+.container .links{
+    display: flex;
+    font-weight: bold;
+    gap: 2rem;
+}
+.container .toogle{
+    color: #18c3d3;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    border: none;
+    margin: 0rem 2rem;
+}
+.getstart{
+    border: none;
+    border-radius: 14px;
+    
+    font-size: 0.5rem;
+    color: rgb(235, 230, 221);
+    background-color: orange;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    /* transition: scale 0.2 ease; */
+}
+.getstart:hover{
+    scale: 1.05;
+}
+.getstart:active
+{
+    scale: 0.95;
+}
+.dropmenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(255, 255, 255,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+.dropmenu.open{
+    height: 240px;
+}
+
+.dropmenu>li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.dropmenu .getstart
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* get start with responsive design */
+
+@media  (max-width:992px){
+
+    .container .links,
+    .container .getstart{
+        display: none;
+       
+    }
+    .dropmenu{
+        display: block;
+    }
+    .dropmenu .getstart{
+        width: 92%;
+    }
+    .container .toogle{
+        display: block;
+       
+    }
+    section#hero{
+        font-size: 27px;
+    }
+    h1{
+      font-size: 32px;    
+    }
+    
+    
+}
+
+section#hero
+{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(236, 231, 231);
+    font-size: large;
+    gap: 10px;
+}
+h1{
+    font-size: x-large;
+}
+@media (max-width:576px)
+{
+    .dropmenu{
+        left: 2rem;
+        width: unset;
+    }
+    section#hero{
+        font-size: 25px;
+    }
+    h1{
+      font-size: 30px;    
+    }
+}
+@media (min-width:993px)
+{
+    .dropmenu .getstart,
+    .dropmenu>li{
+        display: none;
+    }
+    section#hero{
+        font-size: 30px;
+    }
+    h1{
+      font-size: 35px;    
+    }
+}
+
+
+
+
+
+
